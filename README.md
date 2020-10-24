@@ -5,8 +5,8 @@ Mühendis olmayıp yazılım öğrenmek isteyen kişiler için açıklamalı Obj
 
     Dosyaya tıklayıp sağ üstte "History" butonuna gelirseniz srasıyla Görevleri inceleyebilirsiniz. 
     
-    ´´´java
+ ´´´java
         public static void main(String[] args){
             System.out.println("Heluuu");
         }
-    ´´´
+ ´´´
