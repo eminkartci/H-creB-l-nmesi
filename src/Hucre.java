@@ -12,11 +12,11 @@ public class Hucre {
     // Yapılandırıcı
     public Hucre(int ID,String isim,double besinMiktari,double buyukluk,char[] DNA){
         
-        this.ID = ID;
-        this.isim = isim;
-        this.besinMiktari = besinMiktari;
-        this.buyukluk = buyukluk;
-        this.DNA = DNA;
+        this.ID             = ID;
+        this.isim           = isim;
+        this.besinMiktari   = besinMiktari;
+        this.buyukluk       = buyukluk;
+        this.DNA            = DNA;
         
     }
 
@@ -30,7 +30,7 @@ public class Hucre {
                         +"| Besin Miktari: " + this.besinMiktari
                         +"| Büyüklük: " + this.buyukluk
                          ;
-                         
+
         return content;
     }
 
