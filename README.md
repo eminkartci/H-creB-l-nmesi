@@ -1,7 +1,11 @@
 
-# HücreBölünmesi
+# Hücre Bölünmesi
 
-Mühendis olmayıp yazılım öğrenmek isteyen kişiler için açıklamalı Obje Tabanlı Kodlar
+Bir hücre simülasyonu yazılımı. Hücreler oluşturulup büyüyüp gelişecek veya ölecek. Belirli büyüklükteki hücreler bölünebilecek. 
 
-    Dosyaya tıklayıp sağ üstte "History" butonuna gelirseniz srasıyla Görevleri inceleyebilirsiniz. 
-    
+
+```
+Yazar : Emin Kartci
+GitHub: eminkartci
+Date  : 29 Mart 21
+```
