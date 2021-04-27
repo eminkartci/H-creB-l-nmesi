@@ -27,6 +27,17 @@ public class Ortam {
 
         // Ekrana yazdir
         ortam.tumHucreleriGoster();
+
+
+        
+    }
+
+    // Zaman gecir
+    public void zamanGecir(int zaman){
+
+        for(int i =0 ; i < zaman ; i++){
+            birZamanDilimiGecir();
+        }
         
     }
 
