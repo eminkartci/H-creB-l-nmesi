@@ -10,10 +10,10 @@ public class Hucre {
     private double besinMiktari;    
     private double buyukluk;        
 
-    private char[] DNA;
+    private ArrayList<Character> DNA;
 
     // Yapılandırıcı
-    public Hucre(int ID,String isim,double besinMiktari,double buyukluk,char[] DNA){
+    public Hucre(int ID,String isim,double besinMiktari,double buyukluk,ArrayList<Character> DNA){
 
         this.ID = ID;
         this.isim = isim;
