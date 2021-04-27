@@ -43,7 +43,15 @@ public class Hucre {
     }
 
     // GETTER SETTER 
-    
+
+    public void setBesinMiktari(double besinMiktari){
+        this.besinMiktari = besinMiktari;
+    }
+
+    public void setBuyukluk(double buyukluk){
+        this.buyukluk = buyukluk;
+    }
+
     public double getBesinMiktari(){
         return this.besinMiktari;
     }

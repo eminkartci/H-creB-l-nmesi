@@ -6,9 +6,11 @@ public class Ortam {
     // Genel Sabitler
     private char[] nukleikAsitler       = {'A','G','T','S'};
     private String[] HUCRE_ISIMLERI     = {"Bitki Hucresi","Mantar Hucresi","Hayvan Hucresi","Bakteri","Arke"};
-    private double MAX_BESIN_MIKTARI    = 10;
-    private double MAX_BUYUKLUK         = 80;
-    private int DNA_UZUNLUGU            = 150;
+    private double MAX_BESIN_MIKTARI        = 10;
+    private double MAX_BUYUKLUK             = 80;
+    private int DNA_UZUNLUGU                = 150;
+    private double BESIN_TUKETIM_KATSAYISI  = 0.10; // Yüzdelik
+    private double BUYUME_KATSAYISI         = 0.5; // Yüzdelik
 
     // Genel Değişkenler
     ArrayList<Hucre> hucreList = new ArrayList<Hucre>();
@@ -32,7 +34,11 @@ public class Ortam {
 
         // Tum Hucreleri don
         for(Hucre h: this.hucreList){
-            
+            // Besin azalt
+            h.setBesinMiktari(h.getBesinMiktari() * ( 1 - random.nextDouble() * BESIN_TUKETIM_KATSAYISI));
+            // Buyukluk arttir
+            h.setBuyukluk(h.getBuyukluk() * (1 + random.nextDouble() * BUYUME_KATSAYISI));
+
         }
 
     }
