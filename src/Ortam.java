@@ -12,6 +12,7 @@ public class Ortam {
     private double BESIN_TUKETIM_MIKTARI    = 2; // Yüzdelik
     private double BUYUME_MIKTARI           = 10; // Yüzdelik
     private double MINIMUM_BESIN_MIKTARI    = 5; // Yüzdelik
+    private int MAX_RASTGELE_ZAMAN_MIKTARI    = 10; // Yüzdelik
 
     // Genel Değişkenler
     ArrayList<Hucre> hucreList = new ArrayList<Hucre>();
@@ -28,8 +29,19 @@ public class Ortam {
         // Ekrana yazdir
         ortam.tumHucreleriGoster();
 
-
+        ortam.rastgeleZamanGecir();
         
+    }
+
+    // Rastgele Zaman Geçir
+    public void rastgeleZamanGecir(){
+        // Rastgele Zaman Sec
+        int rastgeleZaman = random.nextInt(MAX_RASTGELE_ZAMAN_MIKTARI);
+        // Zaman Gecir 
+        zamanGecir(rastgeleZaman);
+        // Bilgilendir 
+        System.out.println(rastgeleZaman + " zaman gecti !");
+        tumHucreleriGoster();
     }
 
     // Zaman gecir
@@ -53,12 +65,14 @@ public class Ortam {
 
         }
 
+        olenHucreleriBul();
+
     }
 
     // hucrenin ölüp ölmediğini kontrol et
     public void olenHucreleriBul(){
         // Tum Hucreleri tersten don
-        for(int i = this.hucreList.size() ; i >= 0 ; i--){
+        for(int i = this.hucreList.size()-1 ; i >= 0 ; i--){
             // Hucreyi getir
             Hucre h = this.hucreList.get(i);
 
@@ -66,7 +80,7 @@ public class Ortam {
             if (h.getBesinMiktari() < MINIMUM_BESIN_MIKTARI){
                 // hucreyi sil
                 this.hucreList.remove(i);
-                System.out.println(h.getID() + " is dead...");
+                System.out.println(h.getID() + " hucresi açlıktan öldü ...");
             }
 
         }
