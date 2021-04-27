@@ -60,4 +60,8 @@ public class Hucre {
         return this.buyukluk;
     }
 
+    public int getID(){
+        return this.ID;
+    }
+
 }

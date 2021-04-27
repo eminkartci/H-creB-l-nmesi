@@ -6,11 +6,12 @@ public class Ortam {
     // Genel Sabitler
     private char[] nukleikAsitler       = {'A','G','T','S'};
     private String[] HUCRE_ISIMLERI     = {"Bitki Hucresi","Mantar Hucresi","Hayvan Hucresi","Bakteri","Arke"};
-    private double MAX_BESIN_MIKTARI        = 10;
+    private double MAX_BESIN_MIKTARI        = 20;
     private double MAX_BUYUKLUK             = 80;
     private int DNA_UZUNLUGU                = 150;
-    private double BESIN_TUKETIM_KATSAYISI  = 0.10; // Yüzdelik
-    private double BUYUME_KATSAYISI         = 0.5; // Yüzdelik
+    private double BESIN_TUKETIM_MIKTARI    = 2; // Yüzdelik
+    private double BUYUME_MIKTARI           = 10; // Yüzdelik
+    private double MINIMUM_BESIN_MIKTARI    = 5; // Yüzdelik
 
     // Genel Değişkenler
     ArrayList<Hucre> hucreList = new ArrayList<Hucre>();
@@ -35,12 +36,29 @@ public class Ortam {
         // Tum Hucreleri don
         for(Hucre h: this.hucreList){
             // Besin azalt
-            h.setBesinMiktari(h.getBesinMiktari() * ( 1 - random.nextDouble() * BESIN_TUKETIM_KATSAYISI));
+            h.setBesinMiktari(h.getBesinMiktari() - BESIN_TUKETIM_MIKTARI);
             // Buyukluk arttir
-            h.setBuyukluk(h.getBuyukluk() * (1 + random.nextDouble() * BUYUME_KATSAYISI));
+            h.setBuyukluk(h.getBuyukluk() + BUYUME_MIKTARI);
 
         }
 
+    }
+
+    // hucrenin ölüp ölmediğini kontrol et
+    public void olenHucreleriBul(){
+        // Tum Hucreleri tersten don
+        for(int i = this.hucreList.size() ; i >= 0 ; i--){
+            // Hucreyi getir
+            Hucre h = this.hucreList.get(i);
+
+            // Besin miktari belli seviyeden azsa
+            if (h.getBesinMiktari() < MINIMUM_BESIN_MIKTARI){
+                // hucreyi sil
+                this.hucreList.remove(i);
+                System.out.println(h.getID() + " is dead...");
+            }
+
+        }
     }
 
     // Bu method verilen sayı kadar rastgele hücre oluşturur
