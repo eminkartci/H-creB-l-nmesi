@@ -1,5 +1,4 @@
-package src;
-
+import java.util.ArrayList;
 
 public class Hucre {
 
@@ -28,10 +27,10 @@ public class Hucre {
     public String toString(){
 
         String content = "\n-------> HÜCRE <-------\n"
-                        +"| ID: " + this.ID
-                        +"| Isim: " + this.isim
-                        +"| Besin Miktari: " + this.besinMiktari
-                        +"| Büyüklük: " + this.buyukluk
+                    +"| ID: " + this.ID                             + "\n"
+                        +"| Isim: " + this.isim                     + "\n"
+                        +"| Besin Miktari: " + this.besinMiktari    + "\n"
+                        +"| Büyüklük: " + this.buyukluk             + "\n"
                          ;
 
         return content;

@@ -1,5 +1,4 @@
-package src;
-
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Ortam {
@@ -16,6 +15,15 @@ public class Ortam {
     Random random = new Random();
 
     public static void main(String[] args){
+
+        // Ortam Olustur
+        Ortam ortam = new Ortam();
+
+        // Hucre ekle
+        ortam.rastgeleHucreOlustur(10);
+
+        // Ekrana yazdir
+        ortam.tumHucreleriGoster();
         
     }
 
@@ -53,7 +61,17 @@ public class Ortam {
         return geciciDNA;
     }
 
+    // Olusturulan Hucrelerin bilgilerini ekrana yazdir
+    public void tumHucreleriGoster(){
 
+        // Tum hucreleri don
+        for (Hucre h : this.hucreList){
+            // Hucreyi ekrana yazdir
+            h.hucreyi_ekrana_yazdir();
+
+        }
+
+    }
 
 
     
