@@ -27,6 +27,16 @@ public class Ortam {
         
     }
 
+    // Zaman Geçtikçe hücreler belli bir oranda rastgele büyür ve besin kaybeder
+    public void birZamanDilimiGecir(){
+
+        // Tum Hucreleri don
+        for(Hucre h: this.hucreList){
+            
+        }
+
+    }
+
     // Bu method verilen sayı kadar rastgele hücre oluşturur
     public void rastgeleHucreOlustur(int hucreSayisi){
 

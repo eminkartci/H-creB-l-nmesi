@@ -27,7 +27,7 @@ public class Hucre {
     public String toString(){
 
         String content = "\n-------> HÜCRE <-------\n"
-                    +"| ID: " + this.ID                             + "\n"
+                        +"| ID: " + this.ID                         + "\n"
                         +"| Isim: " + this.isim                     + "\n"
                         +"| Besin Miktari: " + this.besinMiktari    + "\n"
                         +"| Büyüklük: " + this.buyukluk             + "\n"
@@ -42,5 +42,14 @@ public class Hucre {
         System.out.println(this.toString());
     }
 
+    // GETTER SETTER 
+    
+    public double getBesinMiktari(){
+        return this.besinMiktari;
+    }
+
+    public double getBuyukluk(){
+        return this.buyukluk;
+    }
 
 }
